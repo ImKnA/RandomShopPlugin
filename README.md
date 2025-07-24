@@ -1,0 +1,2 @@
+# RandomShopPlugin
+Source code RandomShopPlugin
