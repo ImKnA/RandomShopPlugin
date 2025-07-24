@@ -1,0 +1,19 @@
+name: RandomShop
+version: 1.0
+main: main.java.randomshop.RandomShopPlugin
+api-version: "1.20"
+depend: [Vault]
+extra-files:
+  - messages.yml
+commands:
+  randomshop:
+    description: Quản lý cửa hàng ngẫu nhiên
+    usage: /<command> [reload|points|reset]
+    aliases: [rds]
+permissions:
+  randomshop.reload:
+    description: Cho phép reload cấu hình cửa hàng
+    default: op
+  randomshop.reset:
+    description: Cho phép reset cửa hàng thủ công
+    default: op

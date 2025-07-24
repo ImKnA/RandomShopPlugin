@@ -1,0 +1,24 @@
+# Thông báo chung
+prefix: "&8[&dRandomShop&8] &r"
+no-permission: "&cBạn không có quyền sử dụng lệnh này!"
+player-only: "&cChỉ người chơi được dùng lệnh này!"
+
+# Thông báo cửa hàng
+shop-refreshed: "&eCửa hàng đã được làm mới!"
+shop-refresh-broadcast: "&eCửa hàng ngẫu nhiên đã được làm mới! Hãy kiểm tra ngay!"
+shop-open: "&aĐã mở cửa hàng ngẫu nhiên!"
+
+# Thông báo mua hàng
+purchase-success: "&aĐã mua %item% với giá %price% xu!"
+point-purchase-success: "&aĐã mua %item% với %points% điểm!"
+not-enough-money: "&cKhông đủ tiền! Cần %price% xu, bạn có %balance% xu."
+not-enough-points: "&cKhông đủ điểm! Cần %points% điểm, bạn có %balance% điểm."
+purchase-limit-reached: "&cBạn đã đạt giới hạn mua (%limit% lượt/đợt)!"
+
+# Thông báo điểm tích lũy
+points-received: "&aBạn nhận được 1 điểm tích lũy vì không mua hàng trong %resets% lần reset!"
+points-balance: "&aBạn có %points% điểm tích lũy."
+
+# Thông báo lệnh
+command-reload: "&aĐã tải lại plugin RandomShop!"
+command-reset: "&aĐã reset cửa hàng!"

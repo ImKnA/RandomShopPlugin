@@ -1,0 +1,246 @@
+# Cấu hình giao diện cửa hàng
+ui-settings:
+  # Tiêu đề cửa hàng
+  title: "&5Cửa Hàng Ngẫu Nhiên"
+
+  # Kích thước GUI (phải là bội số của 9, từ 9 đến 54)
+  inventory-size: 27
+
+
+  # Vật phẩm viền
+  border-item:
+    material: "PURPLE_STAINED_GLASS_PANE"
+    name: " "
+
+  # Vật phẩm thông tin
+  info-item:
+    material: "CLOCK"
+    name: "&bThông Tin Cửa Hàng"
+    lore:
+      - "&7Làm mới sau: &f%time%"
+      - "&7Lượt mua còn: &f%remaining_purchases%"
+      - "&7Điểm tích lũy: &f%points%"
+
+  # Bố cục các loại slot
+  slot-layout:
+    # Slot viền (để -1 để không hiển thị)
+    border: [ 0,1,2,3,4,5,6,7,8,9,17,18,19,20,21,23,24,25,26 ]
+
+    # Slot vật phẩm thường
+    items: [ 10,11,12,13,14 ]
+
+    # Slot thông tin
+    info: 22
+
+  # Hiệu ứng âm thanh
+  sounds:
+    open-shop: "BLOCK_CHEST_OPEN"
+    close-shop: "BLOCK_CHEST_CLOSE"
+    update-info: "BLOCK_NOTE_BLOCK_HARP"
+
+# Cấu hình âm thanh khi mua thành công
+purchase-sound:
+  sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  volume: 1.0
+  pitch: 1.0
+
+# Cấu hình âm thanh khi không đủ tiền
+no-money-sound:
+  sound: ENTITY_VILLAGER_NO
+  volume: 1.0
+  pitch: 1.0
+
+# Cấu hình âm thanh khi đạt giới hạn mua
+limit-reached-sound:
+  sound: BLOCK_ANVIL_LAND
+  volume: 1.0
+  pitch: 1.0
+
+# Tin nhắn khi cửa hàng làm mới
+refresh-broadcast:
+  message: "&eCửa hàng ngẫu nhiên đã được làm mới! Hãy kiểm tra ngay!"
+
+# Tin nhắn khi nhận điểm tích lũy
+points-message: "&aBạn nhận được 1 điểm tích lũy vì không mua hàng trong 2 lần reset!"
+
+# Số lần reset không mua để nhận 1 điểm
+resets-for-point: 2
+
+# Giới hạn số lượt mua mỗi người chơi (cho vật phẩm bằng xu)
+max-purchases: 3
+
+# Thời gian làm mới cửa hàng (giây)
+refresh-interval: 300
+
+# Số lượng vật phẩm trong cửa hàng
+shop-size:
+  min: 2
+  max: 5
+
+# Lore hiển thị cho vật phẩm mua bằng xu
+item-lore:
+  - "&e&lGIÁ: &6&l%price% xu"
+  - "&7├─ &fSố lượng: &b%amount%"
+  - "&7├─ &fĐộ hiếm: %rarity_color%%rarity%"
+  - "&7├─ &fEnchantments: %enchants%"
+  - "&7└─ &fFlags: %flags%"
+  - ""
+  - "&a&lNHẤN ĐỂ MUA!"
+
+# Lore hiển thị cho vật phẩm mua bằng điểm
+point-item-lore:
+  - "&e&lGIÁ: &6&l%points% điểm"
+  - "&7├─ &fSố lượng: &b%amount%"
+  - "&7├─ &fEnchantments: %enchants%"
+  - "&7└─ &fFlags: %flags%"
+  - ""
+  - "&a&lNHẤN ĐỂ MUA!"
+
+point-shop:
+  title: "&bCửa Hàng Điểm"
+  inventory-size: 27
+  back-button:
+    material: BARRIER
+    name: "&cQuay Lại"
+    slot: 26
+  slot-layout:
+    point-items: [ 10, 11, 12, 13, 14 ]
+
+# Thêm phần định nghĩa màu sắc cho độ hiếm
+rarity-colors:
+  common: "&f"  # Màu trắng
+  rare: "&9"    # Màu xanh da trời
+  legendary: "&6" # Màu vàng
+  epic: "&5"    # Có thể thêm độ hiếm mới
+  mythical: "&d" # Màu hồng
+
+# Thêm phần mô tả enchantments và flags
+enchant-names:
+  sharpness: "Sắc Bén"
+  unbreaking: "Bền Bỉ"
+  mending: "Sửa Chữa"
+  efficiency: "Hiệu Suất"
+  protection: "Bảo Vệ"
+  fire_aspect: "Lửa Thiêu"
+  knockback: "Đẩy Lùi"
+  fortune: "May Mắn"
+  looting: "Cướp Bóc"
+  silk_touch: "Mềm Mại"
+  infinity: "Vô Hạn"
+  power: "Mạnh Mẽ"
+  punch: "Đấm Xa"
+  flame: "Ngọn Lửa"
+  aqua_affinity: "Thủy Chiến"
+  respiration: "Hô Hấp"
+  depth_strider: "Lướt Nước"
+  frost_walker: "Băng Giá"
+  thorns: "Gai Nhọn"
+  channeling: "Sấm Sét"
+  impaling: "Đâm Thủng"
+  loyalty: "Trung Thành"
+  riptide: "Cuốn Xoáy"
+  multishot: "Đa Mũi Tên"
+  piercing: "Xuyên Thủng"
+  quick_charge: "Nạp Nhanh"
+  soul_speed: "Tốc Hồn"
+
+flag-names:
+  HIDE_ENCHANTS: "Ẩn Enchant"
+  HIDE_ATTRIBUTES: "Ẩn Thuộc Tính"
+  HIDE_POTION_EFFECTS: "Ẩn Hiệu ứng"
+  HIDE_DESTROYS: "Ẩn Phá Hủy"
+  HIDE_PLACED_ON: "Ẩn Đặt Trên"
+  HIDE_UNBREAKABLE: "Ẩn Không Phá Hủy"
+
+# Vật phẩm mua bằng xu
+items:
+  common:
+    probability: 60
+    items:
+      - material: DIAMOND
+        amount: 8
+        price: 300
+        name: "&bKim Cương (x8)"
+        probability: 50
+        use-default-lore: false
+        lore:
+          - "&7Một viên đá quý lấp lánh."
+        enchants:
+          - "unbreaking:2"
+        flags:
+          - HIDE_ENCHANTS
+      - material: GOLDEN_APPLE
+        amount: 2
+        price: 150
+        name: "&6Táo Vàng (x2)"
+        probability: 50
+        use-default-lore: false
+        lore:
+          - "&7Khôi phục sức khỏe tức thì."
+  rare:
+    probability: 30
+    items:
+      - material: DIAMOND_SWORD
+        amount: 1
+        price: 500
+        name: "&9Thanh Kiếm Kim Cương"
+        probability: 50
+        enchants:
+          - "sharpness:4"
+          - "unbreaking:3"
+        flags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+        use-default-lore: false
+        lore:
+          - "&fThanh kiếm mạnh mẽ cho chiến binh thực thụ."
+      - material: ELYTRA
+        amount: 1
+        price: 1000
+        name: "&aCánh Elytra"
+        probability: 50
+        use-default-lore: false
+        lore:
+          - "&7Cho phép bạn bay qua bầu trời."
+  legendary:
+    probability: 10
+    items:
+      - material: TOTEM_OF_UNDYING
+        amount: 1
+        price: 800
+        name: "&dBùa Bất Tử"
+        probability: 50
+        use-default-lore: false
+        lore:
+          - "&6Giữ mạng sống của bạn một lần khi chết."
+        flags:
+          - HIDE_ATTRIBUTES
+      - material: NETHERITE_INGOT
+        amount: 1
+        price: 1200
+        name: "&6Thỏi Netherite"
+        probability: 50
+        use-default-lore: false
+        lore:
+          - "&8Nguyên liệu hiếm để nâng cấp vật phẩm."
+
+# Vật phẩm mua bằng điểm
+point-items:
+  - material: ENCHANTED_GOLDEN_APPLE
+    amount: 1
+    points: 5
+    name: "&6Táo Vàng Phù Phép"
+    use-default-lore: false
+    lore:
+      - "&7Hiệu ứng mạnh mẽ hơn táo vàng thường."
+    commands:
+      - "console: say %player% đã mua táo phù phép!"
+      - "player: effect give %player% minecraft:regeneration 10 1"
+  - material: BEACON
+    amount: 1
+    points: 10
+    name: "&bĐèn Hiệu"
+    lore:
+      - "&7Cung cấp hiệu ứng đặc biệt trong khu vực."
+    flags:
+      - HIDE_ATTRIBUTES
